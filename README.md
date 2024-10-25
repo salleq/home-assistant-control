@@ -7,5 +7,6 @@ I couldn't find such projects anywhere, at least not active.
 You need to rename the config.example.js to config.js and then:
 - Add the buttons/sliders you want to use as buttons in the HTML - note entity_id and the status-id
 - Add entity_ids and status-id:s in the javascript as well - multiple places (sorry do not know how to consolidate them)
+- Front the nginx with some other reverse proxy (or just get certificates for nginx) and get the CORS stuff working with Home Assistant...it won't work with only IP.
 
 Expect bugs.
