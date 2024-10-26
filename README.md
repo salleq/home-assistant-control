@@ -16,6 +16,7 @@ Planned functions:
 - Color slider for lights
 - Separate files for better manageability
 - Maybe something else, but most of the functionality I need is already baked in - this is NOT meant for replacing HA dashboard completely, instead it's a quick loading web page to toggle the switches you most need.
+- Authentication is NOT planned. It's baked in. Gotta find out how to make that a bit more secure (ie. token not in plain text for client to get.)
 
 You need to rename the config.example.js to config.js and then:
 - Add the buttons/sliders you want to use as buttons in the HTML - note entity_id and the status-id
