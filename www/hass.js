@@ -17,7 +17,15 @@ window.toggleEntity = async function(entityId) {
         'light.olkkarin_jalkalamppu_2': 'statusOlkkarinJalkalamppu',
         'switch.tiskikone': 'statusOlkkarinLaturi',
         'light.h6056': 'statusOlkkarinTaustavalo',
-        'input_boolean.nightmode': 'statusYömoodi'
+        'input_boolean.nightmode': 'statusYömoodi',
+        'light.ambient': 'statusAmbient',
+        'switch.coffee': 'statusCoffee',
+        'light.keittio_2_2': 'statusKokkausvalo',
+        'light.keittion_poyta': 'statusRuokailuvalo',
+        'switch.kuivuri': 'statusKuivuri',
+        'light.makkarin_jalkalamppu': 'statusJalkalamppu',
+        'switch.gh1_1_tippukastelu': 'statusTippukastelu',
+        'switch.shelly1l_backyard': 'statusTakapihanValo'
         // Add other entities as needed
     };
 
@@ -195,7 +203,15 @@ window.fetchInitialState = async function() {
         'switch.tiskikone',
         'light.h6056',
         'input_button.media_off',
-        'input_boolean.nightmode'
+        'input_boolean.nightmode',
+        'light.ambient',
+        'switch.coffee',
+        'light.keittio_2_2',
+        'light.keittion_poyta',
+        'switch.kuivuri',
+        'light.makkarin_jalkalamppu',
+        'switch.gh1_1_tippukastelu',
+        'switch.shelly1l_backyard'
         // Add other entities as needed
     ];
 
@@ -240,7 +256,15 @@ function updateUI(data) {
         'switch.tiskikone': 'statusOlkkarinLaturi',
         'light.h6056': 'statusOlkkarinTaustavalo',
         'input_button.media_off': 'statusMediaOff',
-        'input_boolean.nightmode': 'statusYömoodi'
+        'input_boolean.nightmode': 'statusYömoodi',
+        'light.ambient': 'statusAmbient',
+        'switch.coffee': 'statusCoffee',
+        'light.keittio_2_2': 'statusKokkausvalo',
+        'light.keittion_poyta': 'statusRuokailuvalo',
+        'switch.kuivuri': 'statusKuivuri',
+        'light.makkarin_jalkalamppu': 'statusJalkalamppu',
+        'switch.gh1_1_tippukastelu': 'statusTippukastelu',
+        'switch.shelly1l_backyard': 'statusTakapihanValo'
         // Add other entities as needed
     };
 
@@ -320,6 +344,9 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchSensorValue('sensor.living_room_humidity', 'olkkariKosteus');
     fetchSensorValue('sensor.heittoruuvi_humidity', 'humidoriHumi');
     fetchSensorValue('sensor.heittoruuvi', 'humidoriTemp');
+    fetchSensorValue('sensor.sauna_valmis', 'saunaValmis');
+    fetchSensorValue('sensor.sauna', 'saunaTemp');
+    fetchSensorValue('sensor.bathroom_humidity', 'bathroomHumidity');
 });
 
 
