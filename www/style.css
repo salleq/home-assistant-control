@@ -35,8 +35,9 @@ h1 {
 
 /* Control Panel Container */
 .control-panel {
-    max-width: 600px;
-    margin: 0 auto;
+    flex-grow: 1; /* Allow it to take up remaining space */
+    max-width: none; /* Override previous max-width */
+    margin: 0; /* Override previous margin */
     padding: 20px;
     background-color: #1e1e1e; /* Slightly lighter dark background */
     border-radius: 10px;
@@ -106,6 +107,51 @@ button:hover {
     align-items: center; /* Vertically align items */
 }
 
+/* Styles for the new main layout container */
+.main-layout-container {
+    display: flex;
+    gap: 20px; /* Space between nav and content */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+/* Individual Navigation Button Styling */
+.nav-button {
+    padding: 10px 15px;
+    background-color: #444444;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center; /* Center icon and text vertically */
+}
+
+.nav-button i.mdi {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.nav-button:hover {
+    background-color: #555555;
+}
+
+/* Styles for the side navigation container */
+.side-navigation {
+    flex: 0 0 180px; /* Fixed width for navigation */
+    background-color: #1e1e1e; /* Same as control panel background */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between nav links */
+    padding: 10px; /* Padding around the buttons */
+}
+
+.side-navigation .nav-button {
+    width: 100%; /* Make buttons fill navigation width */
+    justify-content: flex-start; /* Align text to left */
+}
+
 /* Button styling for active/on state */
 button.active {
     background-color: #5ba45e;
@@ -161,47 +207,9 @@ input[type="range"] {
     margin: 10px 0;
 }
 
-/* Button for reloading the page */
-.reload-button {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: #3a3a3a;
-}
 
-.reload-button:hover {
-    background-color: #555555;
-}
 
-/* Navigation Bar Styling */
-nav {
-    display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap to new rows on smaller screens */
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10px; /* Space between navigation buttons */
-}
 
-/* Individual Navigation Button Styling */
-.nav-button {
-    padding: 10px 15px;
-    background-color: #444444;
-    color: #e0e0e0;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center; /* Center icon and text vertically */
-}
-
-.nav-button i.mdi {
-    margin-right: 5px; /* Space between icon and text */
-}
-
-.nav-button:hover {
-    background-color: #555555;
-}
 
 
 .sensor-cards {

@@ -12,6 +12,16 @@
 
 </head>
 <body>
+    <div class="main-layout-container">
+        <nav class="side-navigation">
+            <a href="#" class="nav-button" onclick="reloadPage()"><i class="mdi mdi-chair-rolling"></i>Työhuone</a>
+            <a href="livingroom.html" class="nav-button"><i class="mdi mdi-sofa"></i>Olohuone</a>
+            <a href="bedroom.html" class="nav-button"><i class="mdi mdi-bed"></i>Makuuhuone</a>
+            <a href="kitchen.html" class="nav-button"><i class="mdi mdi-chef-hat"></i>Keittiö</a>
+            <a href="bathroom.html" class="nav-button"><i class="mdi mdi-shower-head"></i>Kylpyhuone</a>
+            <a href="chili.html" class="nav-button"><i class="mdi mdi-chili-mild"></i>Chili</a>
+            <a href="media.html" class="nav-button"><i class="mdi mdi-play-pause"></i>Media</a>
+        </nav>
     <div class="control-panel">
         <!-- Header with Logo and Title -->
         <div class="header">
@@ -19,8 +29,7 @@
            <h1>Home Assistant Control Panel</h1>
        </div>
 
-        <!-- Reload Page Button -->
-        <button class="reload-button" onclick="reloadPage()"><i class="mdi mdi-refresh"></i>Reload Page</button>
+
 
         <!-- Toggle Buttons -->
         <div class="buttons-container">
@@ -41,7 +50,7 @@
             </div>
 
             <div class="button-row">
-                <button onclick="toggleEntity('switch.shellyplug_tyohuone_2')"><i class="mdi mdi-power-socket-eu"></i>Työkoneen virta</button>
+                <button onclick="toggleEntity('switch.shellyplug_tyohuone_2')"><i class="mdi mdi-power-socket-eu"></i>Toimiston laturi</button>
                 <span id="statusShellyPlug1" class="status-message"></span>
             </div>
             <div class="button-row">
@@ -69,16 +78,9 @@
         </div>
     </div>
 
-    <!-- Navigation Buttons for Other Pages -->
-    <nav>
-        <a href="index.html" class="nav-button"><i class="mdi mdi-chair-rolling"></i>Työhuone</a>
-        <a href="livingroom.html" class="nav-button"><i class="mdi mdi-sofa"></i>Olohuone</a>
-        <a href="bedroom.html" class="nav-button"><i class="mdi mdi-bed"></i>Makuuhuone</a>
-        <a href="kitchen.html" class="nav-button"><i class="mdi mdi-chef-hat"></i>Keittiö</a>
-        <a href="bathroom.html" class="nav-button"><i class="mdi mdi-shower-head"></i>Kylpyhuone</a>
-        <a href="chili.html" class="nav-button"><i class="mdi mdi-chili-mild"></i>Chili</a>
-        <a href="media.html" class="nav-button"><i class="mdi mdi-play-pause"></i>Media</a>
-    </nav>
+
+
+    </div> <!-- Close main-layout-container -->
 
     <!-- JavaScript file linked here -->
     <script src="config.js"></script>

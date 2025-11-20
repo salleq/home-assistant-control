@@ -12,7 +12,17 @@
 
 </head>
 <body>
-    <div class="control-panel">
+    <div class="main-layout-container">
+        <nav class="side-navigation">
+            <a href="index.html" class="nav-button"><i class="mdi mdi-chair-rolling"></i>Työhuone</a>
+            <a href="#" class="nav-button" onclick="reloadPage()"><i class="mdi mdi-sofa"></i>Olohuone</a>
+            <a href="bedroom.html" class="nav-button"><i class="mdi mdi-bed"></i>Makuuhuone</a>
+            <a href="kitchen.html" class="nav-button"><i class="mdi mdi-chef-hat"></i>Keittiö</a>
+            <a href="bathroom.html" class="nav-button"><i class="mdi mdi-shower-head"></i>Kylpyhuone</a>
+            <a href="chili.html" class="nav-button"><i class="mdi mdi-chili-mild"></i>Chili</a>
+            <a href="media.html" class="nav-button"><i class="mdi mdi-play-pause"></i>Media</a>
+        </nav>
+        <div class="control-panel">
         <!-- Header with Logo and Title -->
         <div class="header">
            <img src="green.png" alt="Home Assistant Logo">
@@ -20,8 +30,7 @@
            <h1>Home Assistant Control Panel</h1>
        </div>
 
-        <!-- Reload Page Button -->
-        <button class="reload-button" onclick="reloadPage()"><i class="mdi mdi-refresh"></i>Reload Page</button>
+
 
         <!-- Entity Controls -->
         
@@ -120,16 +129,9 @@
 
 
 
-    <!-- Navigation Buttons for Other Pages -->
-    <nav>
-        <a href="index.html" class="nav-button"><i class="mdi mdi-chair-rolling"></i>Työhuone</a>
-        <a href="livingroom.html" class="nav-button"><i class="mdi mdi-sofa"></i>Olohuone</a>
-        <a href="bedroom.html" class="nav-button"><i class="mdi mdi-bed"></i>Makuuhuone</a>
-        <a href="kitchen.html" class="nav-button"><i class="mdi mdi-chef-hat"></i>Keittiö</a>
-        <a href="bathroom.html" class="nav-button"><i class="mdi mdi-shower-head"></i>Kylpyhuone</a>
-        <a href="chili.html" class="nav-button"><i class="mdi mdi-chili-mild"></i>Chili</a>
-        <a href="media.html" class="nav-button"><i class="mdi mdi-play-pause"></i>Media</a>
-    </nav>
+
+
+    </div> <!-- Close main-layout-container -->
 
     <!-- JavaScript file linked here -->
     <script src="config.js"></script>
