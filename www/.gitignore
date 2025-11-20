@@ -5,3 +5,5 @@ hassjsbackup.js
 hassjsbackup2.js
 node_modules/
 www_js/
+package.json
+package-lock.json
