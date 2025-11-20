@@ -13,25 +13,31 @@ body {
     padding: 20px;
 }
 
-/* Header Styling for Logo and Title */
-.header {
+/* Side Header Styling */
+.side-header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack logo and title vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px 0;
     margin-bottom: 20px;
+    border-bottom: 1px solid #333; /* Separator */
 }
 
-.header img {
-    width: 50px; /* Adjust the size of the logo */
+.side-header img {
+    width: 40px; /* Smaller logo in side header */
     height: auto;
-    margin-right: 15px; /* Space between logo and title */
+    margin-bottom: 10px;
 }
 
-h1 {
-    color: #f0f0f0; /* Slightly lighter heading color */
-    font-size: 24px;
-    line-height: 1.2;
+.side-header h1 {
+    color: #f0f0f0;
+    font-size: 20px; /* Smaller font for HACP */
+    line-height: 1;
+    margin: 0;
 }
+
+
+
 
 /* Control Panel Container */
 .control-panel {
