@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Assistant Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="green.png">
+    
+    <!-- Link to Material Design Icons (MDI) -->
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css">
+
+</head>
+<body>
+    <div class="control-panel">
+        <!-- Header with Logo and Title -->
+        <div class="header">
+           <img src="green.png" alt="Home Assistant Logo">
+           <!-- https://f-droid.org/repo/io.homeassistant.companion.android.minimal/en-US/icon_qC1yTG4zbN3myNu7NZraFra1fnLUtzv9SYZSC4t4ujI=.png -->
+           <h1>Home Assistant Control Panel</h1>
+       </div>
+
+        <!-- Reload Page Button -->
+        <button class="reload-button" onclick="reloadPage()"><i class="mdi mdi-refresh"></i>Reload Page</button>
+
+        <!-- Entity Controls -->
+        
+        
+        <div class="buttons-container">
+            <div class="button-row">
+                <button onclick="toggleEntity('light.olohuone_vasen')"><i class="mdi mdi-lightbulb"></i>Vasen kattovalo</button>
+                <span id="statusVasenkattovalo" class="status-message"></span>
+            </div>
+
+            <div class="button-row">
+                <button onclick="toggleEntity('light.livingroom_ceiling_right')"><i class="mdi mdi-light-switch"></i>Oikea kattovalo</button>
+                <span id="statusOikeaKattovalo" class="status-message"></span>
+            </div>
+
+            <div class="button-row">
+                <button onclick="toggleEntity('input_boolean.ceiling_lights')"><i class="mdi mdi-light-switch"></i>Oikea kattovalo toggle</button>
+                <span id="statusOikeaKattovaloToggle" class="status-message"></span>
+            </div>
+
+
+            <div class="button-row">
+                <button onclick="toggleEntity('light.olkkarin_jalkalamppu_2')"><i class="mdi mdi-power-socket-eu"></i>Jalkalamppu</button>
+                <span id="statusOlkkarinJalkalamppu" class="status-message"></span>
+            </div>
+
+            <div class="button-row">
+                <button onclick="toggleEntity('switch.tiskikone')"><i class="mdi mdi-power-socket-eu"></i>Olkkarin laturi</button>
+                <span id="statusOlkkarinLaturi" class="status-message"></span>
+            </div>
+
+            <div class="button-row">
+                <button onclick="toggleEntity('light.h6056')"><i class="mdi mdi-light-switch"></i>Taustavalo</button>
+                <span id="statusOlkkarinTaustavalo" class="status-message"></span>
+            </div>
+        </div>
+
+
+        <div class="slider-container">
+            <input type="range" min="1" max="255"  class="brightness-slider-light-olkkarin_jalkalamppu_2" onchange="updateBrightness('light.olkkarin_jalkalamppu_2', this.value)" />
+            <span id="status-light.olkkarin_jalkalamppu_2" class="status-message">Off</span>
+            <span>Säädä kirkkautta (jalkalamppu)</span>
+        </div>
+
+        <div class="slider-container">
+            <input type="range" min="153" max="500" class="temp-slider-light-olkkarin_jalkalamppu_2" onchange="updateColorTemperature('light.olkkarin_jalkalamppu_2', this.value)" />
+            <span>Säädä värilämpötilaa (jalkalamppu)</span>
+        </div>
+
+        <div class="slider-container">
+            <input type="range" min="1" max="255"  class="brightness-slider-light-h6056" onchange="updateBrightness('light.h6056', this.value)" />
+            <span id="status-light.h6056" class="status-message">Off</span>
+            <span>Säädä kirkkautta (Taustavalo)</span>
+        </div>
+
+        <div class="slider-container">
+            <input type="range" min="153" max="500" class="temp-slider-light-h6056" onchange="updateColorTemperature('light.h6056', this.value)" />
+            <span>Säädä värilämpötilaa (Taustavalo)</span>
+        </div>
+
+        <!-- Sensors -->
+        <div class="sensor-cards">
+            <div class="sensor-card">
+              <div class="sensor-label">Living Room Temperature</div>
+              <div class="sensor-value" id="olkkariLampotila">Loading...</div>
+            </div>
+          
+            <div class="sensor-card">
+              <div class="sensor-label">Living Room Humidity</div>
+              <div class="sensor-value" id="olkkariKosteus">Loading...</div>
+            </div>
+          
+            <div class="sensor-card">
+              <div class="sensor-label">Humidori Humidity</div>
+              <div class="sensor-value" id="humidoriHumi">Loading...</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-label">Humidori Temperature</div>
+                <div class="sensor-value" id="humidoriTemp">Loading...</div>
+              </div>
+          </div>
+          
+        <!--
+        <div class="slider-container">
+            <input type="range" min="1" max="255" onchange="updateBrightness('light.gr_ambient', this.value)" />
+            <span>Säädä kirkkautta (ledit)</span>
+        </div>
+
+        <div class="slider-container">
+            <input type="range" min="153" max="500" onchange="updateColorTemperature('light.gr_ambient', this.value)" />
+            <span>Säädä värilämpötilaa (ledit)</span>
+        </div>
+        -->
+    </div>
+
+
+
+    <!-- Navigation Buttons for Other Pages -->
+    <nav>
+        <a href="index.html" class="nav-button"><i class="mdi mdi-chair-rolling"></i>Työhuone</a>
+        <a href="livingroom.html" class="nav-button"><i class="mdi mdi-sofa"></i>Olohuone</a>
+        <a href="bedroom.html" class="nav-button"><i class="mdi mdi-bed"></i>Makuuhuone</a>
+        <a href="kitchen.html" class="nav-button"><i class="mdi mdi-chef-hat"></i>Keittiö</a>
+        <a href="bathroom.html" class="nav-button"><i class="mdi mdi-shower-head"></i>Kylpyhuone</a>
+        <a href="chili.html" class="nav-button"><i class="mdi mdi-chili-mild"></i>Chili</a>
+        <a href="media.html" class="nav-button"><i class="mdi mdi-play-pause"></i>Media</a>
+    </nav>
+
+    <!-- JavaScript file linked here -->
+    <script src="config.js"></script>
+    <script src="hass.js"></script>
+</body>
+</html>
