@@ -12,52 +12,60 @@
 
 </head>
 <body>
-    <div class="control-panel">
-         <!-- Header with Logo and Title -->
-         <div class="header">
-            <img src="green.png" alt="Home Assistant Logo">
-            <h1>Home Assistant Control Panel</h1>
+    <div class="main-layout-container">
+        <nav class="side-navigation">
+            <div class="side-header">
+                <img src="green.png" alt="Home Assistant Logo">
+                <h1>HACP</h1>
+            </div>
+            <a href="index.html" class="nav-button"><i class="mdi mdi-chair-rolling"></i>Työhuone</a>
+            <a href="livingroom.html" class="nav-button"><i class="mdi mdi-sofa"></i>Olohuone</a>
+            <a href="bedroom.html" class="nav-button"><i class="mdi mdi-bed"></i>Makuuhuone</a>
+            <a href="kitchen.html" class="nav-button"><i class="mdi mdi-chef-hat"></i>Keittiö</a>
+            <a href="#" class="nav-button" onclick="reloadPage()"><i class="mdi mdi-shower-head"></i>Kylpyhuone</a>
+            <a href="chili.html" class="nav-button"><i class="mdi mdi-chili-mild"></i>Chili</a>
+            <a href="media.html" class="nav-button"><i class="mdi mdi-play-pause"></i>Media</a>
+        </nav>
+        <div class="control-panel">
+            <div class="buttons-container">
+                <div class="button-row">
+                    <button onclick="toggleEntity('switch.tp_link_washer')"><i class="mdi mdi-washing-machine"></i>Pesukone</button>
+                    <span id="statusWasher" class="status-message"></span>
+                </div>
+
+                <div class="button-row">
+                    <button onclick="toggleEntity('switch.tp_link_dryer')"><i class="mdi mdi-tumble-dryer"></i>Kuivausrumpu</button>
+                    <span id="statusDryer" class="status-message"></span>
+                </div>
+
+                <div class="button-row">
+                    <button onclick="toggleEntity('light.kylppari')"><i class="mdi mdi-lightbulb"></i>Kylppärin valot</button>
+                    <span id="statusKylpparinvalot" class="status-message"></span>
+                </div>
+
+                <div class="button-row">
+                    <button onclick="toggleEntity('switch.shelly1l_bathroomfan')"><i class="mdi mdi-fan"></i>Kylppärin tuuletin</button>
+                    <span id="statusKylpparintuuletin" class="status-message"></span>
+                </div>
+            </div>
+
+            <!-- Sensors -->
+            <div class="sensor-cards">
+                <div class="sensor-card">
+                    <div class="sensor-label">Sauna valmis (min)</div>
+                    <div class="sensor-value" id="saunaValmis">Loading...</div>
+                </div>
+                <div class="sensor-card">
+                    <div class="sensor-label">Sauna</div>
+                    <div class="sensor-value" id="saunaTemp">Loading...</div>
+                </div>
+                <div class="sensor-card">
+                    <div class="sensor-label">Kylpyhuoneen ilmankosteus</div>
+                    <div class="sensor-value" id="bathroomHumidity">Loading...</div>
+                </div>
+            </div>
         </div>
-       
-
-        <!-- Reload Page Button -->
-        <button class="reload-button" onclick="reloadPage()">
-            <i class="mdi mdi-refresh"></i> Reload Page
-        </button>
-
-        <!-- Entity Controls -->
-        
-        <div class="button-row">
-            <button onclick="toggleEntity('switch.tp_link_washer')"><i class="mdi mdi-washing-machine"></i>Pesukone</button>
-            
-            <span id="statusWasher" class="status-message"></span>
-        </div>
-
-        <div class="button-row">
-            <button onclick="toggleEntity('switch.tp_link_dryer')"><i class="mdi mdi-tumble-dryer"></i>Kuivausrumpu</button>
-            <span id="statusDryer" class="status-message"></span>
-        </div>
-
-        <div class="button-row">
-            <button onclick="toggleEntity('light.kylppari')"><i class="mdi mdi-lightbulb"></i>Kylppärin valot</button>
-            <span id="statusKylpparinvalot" class="status-message"></span>
-        </div>
-
-        <div class="button-row">
-            <button onclick="toggleEntity('switch.shelly1l_bathroomfan')"><i class="mdi mdi-fan"></i>Kylppärin tuuletin</button>
-            <span id="statusKylpparintuuletin" class="status-message"></span>
-        </div>
-
-    </div>
-
-    <!-- Navigation Buttons for Other Pages -->
-    <nav>
-        <a href="index.html" class="nav-button"><i class="mdi mdi-chair-rolling"></i>Työhuone</a>
-        <a href="livingroom.html" class="nav-button"><i class="mdi mdi-sofa"></i>Olohuone</a>
-        <a href="bedroom.html" class="nav-button"><i class="mdi mdi-bed"></i>Makuuhuone</a>
-        <a href="kitchen.html" class="nav-button"><i class="mdi mdi-chef-hat"></i>Keittiö</a>
-        <a href="bathroom.html" class="nav-button"><i class="mdi mdi-shower-head"></i>Kylpyhuone</a>
-    </nav>
+    </div> <!-- Close main-layout-container -->
 
     <!-- JavaScript file linked here -->
     <script src="config.js"></script>

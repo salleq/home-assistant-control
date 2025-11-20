@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Assistant Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="green.png">
+
+    <!-- Link to Material Design Icons (MDI) -->
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css">
+
+</head>
+<body>
+    <div class="main-layout-container">
+        <nav class="side-navigation">
+            <div class="side-header">
+                <img src="green.png" alt="Home Assistant Logo">
+                <h1>HACP</h1>
+            </div>
+            <a href="index.html" class="nav-button"><i class="mdi mdi-chair-rolling"></i>Työhuone</a>
+            <a href="livingroom.html" class="nav-button"><i class="mdi mdi-sofa"></i>Olohuone</a>
+            <a href="#" class="nav-button" onclick="reloadPage()"><i class="mdi mdi-bed"></i>Makuuhuone</a>
+            <a href="kitchen.html" class="nav-button"><i class="mdi mdi-chef-hat"></i>Keittiö</a>
+            <a href="bathroom.html" class="nav-button"><i class="mdi mdi-shower-head"></i>Kylpyhuone</a>
+            <a href="chili.html" class="nav-button"><i class="mdi mdi-chili-mild"></i>Chili</a>
+            <a href="media.html" class="nav-button"><i class="mdi mdi-play-pause"></i>Media</a>
+        </nav>
+    <div class="control-panel">
+        <!-- Toggle Buttons -->
+        <div class="buttons-container">
+            <div class="button-row">
+                <button onclick="toggleEntity('light.makkarin_jalkalamppu')"><i class="mdi mdi-lamp"></i>Jalkalamppu</button>
+                <span id="statusJalkalamppu" class="status-message"></span>
+            </div>
+        </div>
+    </div>
+    </div> <!-- Close main-layout-container -->
+
+    <!-- JavaScript file linked here -->
+    <script src="config.js"></script>
+    <script src="hass.js"></script>
+</body>
+</html>
