@@ -7,6 +7,9 @@ window.toggleEntity = async function(entityId) {
         'light.gr_ambient': 'statusGrAmbient',
         'switch.shellyplug_s_80646f82707a': 'statusShellyPlug2',
         'switch.shellyplug_tyohuone_2': 'statusShellyPlug1',
+        'switch.shellyplug_s_genet': 'statusShellyPlugGenet',
+        'switch.subwoofer': 'statusSubwoofer',
+        'input_button.desk_pro_shutdown': 'statusDeskProShutdown',
         'switch.tp_link_washer': 'statusWasher',
         'switch.tp_link_dryer': 'statusDryer',
         'light.kylppari': 'statusKylpparinvalot',
@@ -211,7 +214,10 @@ window.fetchInitialState = async function() {
         'switch.kuivuri',
         'light.makkarin_jalkalamppu',
         'switch.gh1_1_tippukastelu',
-        'switch.shelly1l_backyard'
+        'switch.shelly1l_backyard',
+        'switch.shellyplug_s_genet',
+        'switch.subwoofer',
+        'input_button.desk_pro_shutdown'
         // Add other entities as needed
     ];
 
@@ -264,7 +270,10 @@ function updateUI(data) {
         'switch.kuivuri': 'statusKuivuri',
         'light.makkarin_jalkalamppu': 'statusJalkalamppu',
         'switch.gh1_1_tippukastelu': 'statusTippukastelu',
-        'switch.shelly1l_backyard': 'statusTakapihanValo'
+        'switch.shelly1l_backyard': 'statusTakapihanValo',
+        'switch.shellyplug_s_genet': 'statusShellyPlugGenet',
+        'switch.subwoofer': 'statusSubwoofer',
+        'input_button.desk_pro_shutdown': 'statusDeskProShutdown'
         // Add other entities as needed
     };
 
