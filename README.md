@@ -22,3 +22,4 @@ This tool is ideal for users who:
 *   Require a quick and responsive interface for basic Home Assistant interactions.
 *   Want to avoid the overhead of the complete Home Assistant web interface on specific clients.
 
+<img width="1215" height="630" alt="image" src="https://github.com/user-attachments/assets/7db3cf4d-d088-469c-a462-73419357273e" />
