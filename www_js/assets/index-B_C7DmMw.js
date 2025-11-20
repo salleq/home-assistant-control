@@ -1,0 +1,1 @@
+import{J as e,s as a,g as i}from"./index-lMiL1DkS.js";function d({entity:t,...l}){return e(i,{fullWidth:!0,children:e(a,{entity:t,...l,disableScale:!0,disableRipples:!0,disableActiveState:!0,disableColumns:!0})})}export{d as ModalWeatherControls,d as default};
