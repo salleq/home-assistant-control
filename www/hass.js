@@ -9,7 +9,6 @@ window.toggleEntity = async function(entityId) {
         'switch.shellyplug_tyohuone_2': 'statusShellyPlug1',
         'switch.shellyplug_s_genet': 'statusShellyPlugGenet',
         'switch.subwoofer': 'statusSubwoofer',
-        'input_button.desk_pro_shutdown': 'statusDeskProShutdown',
         'switch.tp_link_washer': 'statusWasher',
         'switch.tp_link_dryer': 'statusDryer',
         'light.kylppari': 'statusKylpparinvalot',
@@ -73,6 +72,7 @@ window.toggleEntity = async function(entityId) {
 window.pressInputButton = async function(entityId) {
     // Mapping entity ID to its corresponding status div ID
     const statusIdMap = {
+        'input_button.desk_pro_shutdown': 'statusDeskProShutdown',
         'input_button.media_off': 'statusMediaOff'
     };
 
