@@ -357,6 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchSensorValue('sensor.sauna', 'saunaTemp');
     fetchSensorValue('sensor.bathroom_humidity', 'bathroomHumidity');
     fetchSensorValue('sensor.toimisto_temp_humi_temperature', 'toimistoLampotila');
+    fetchSensorValue('sensor.toimiston_ilmankosteus', 'toimistoIlmankosteus');
 });
 
 
